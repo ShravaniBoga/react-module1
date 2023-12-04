@@ -1,6 +1,6 @@
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./components/ExpenseList/ExpenseItem";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       LocationOfExpenditure: "hyderabad",
@@ -35,6 +35,6 @@ function App() {
       ))}
     </>
   );
-}
+};
 
 export default App;
