@@ -1,5 +1,5 @@
 import ExpenseItem from "./components/ExpenseList/ExpenseItem";
-
+import NewExpense from "./components/NewExpense/NewExpense";
 const App = () => {
   const expenses = [
     {
@@ -29,10 +29,13 @@ const App = () => {
   ];
   return (
     <>
-      <h1>shravani</h1>
-      {expenses.map((expense) => (
+      <h1>let's start</h1>
+      <NewExpense />
+      <h2>ExpenseItems Details</h2>
+
+      {/* {expenses.map((expense) => (
         <ExpenseItem item={expense}></ExpenseItem>
-      ))}
+      ))} */}
     </>
   );
 };
