@@ -10,7 +10,7 @@ const ExpenseForm = (props) => {
 
   const LocationChangeHandler = (event) => {
     setEnteredLocation(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
   };
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
@@ -32,7 +32,7 @@ const ExpenseForm = (props) => {
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
-      location: enteredLocation,
+      LocationOfExpenditure: enteredLocation,
     };
     props.onSaveExpenseData(expenseData);
     setEnteredTitle("");

@@ -6,27 +6,31 @@ import Card from "../UI/Card";
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.item.title);
   const [amount, setAmount] = useState(props.item.amount);
+
   // let title = props.item.title;
   const clickHandler = () => {
-    // title = "updated";
+
     setTitle("updated");
 
-    // console.log(title);
+
   };
   const addExpense = () => {
-    // title = "updated";
+
 
     setAmount("100$");
-    // console.log(title);
+
   };
   const deleteButton = (e) => {
     let item = e.target.parentElement;
     item.remove();
   };
+  console.log(props, "line27")
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.item.date}></ExpenseDate>
       <ExpenseDetails
+        key={props.item.id}
+
         amount={amount}
         title={title}
         location={props.item.LocationOfExpenditure}
